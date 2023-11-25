@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class=scroll>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Individueel 2</title>
+    <link rel="stylesheet" type="text/css" href="css/portfolioNieuw.css">
+    <link rel="icon" href="afbeeldingen/11.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="AdsBot-Google" content="noindex, nofollow">
+</head>
+
+
+<body>
+
+    <div class=container>
+
+        <div class=navbar>
+            <a href="index.html">
+                <img src="afbeeldingen/11.png" class=logo>
+            </a>
+            <nav>
+                <ul id=menuList>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overmij.html">Over mij</a></li>
+                    <li><a href="cmd.html" class="streep">CMD projecten</a></li>
+                    <li><a href="vrijetijd.html">Vrije tijd </a></li>
+                    <li><a href="contact.html">Contact </a></li>
+                </ul>
+            </nav>
+            <img src="afbeeldingen/3.png" class=menu-icon onclick="togglemenu()">
+        </div>
+
+
+
+
+
+        <section class=containerRij>
+            <section class=rij>
+                <div class=column1>
+                    <h2>Project Individueel 2 </h2>
+                    <h3>Fun Forest prototype </h3>
+                    <p> Mijn case ging over het probleem dat klanten van Fun Forest vaak niet meer dan 1 keer het park bezoeken. Ik heb hiervoor een oplossing bedacht: competitie toegevoegd aan het klimpark, door middel van een app. Ook kan de app gebruikt worden om een reservering te plaatsen i.v.m. het maximaal aantal bezoekers in coronatijd.</p>
+                    <p><a class="link" href="https://docs.google.com/document/d/10KeJ4iDGyKzSJw6rB9jO8yCjWORAtNpfLq7v78qI_-c/edit">Klik hier voor de productbiografie (proces) </a>
+                    </p>
+                    <p class=datum>Mei 2020 (CMD jaar 1) </p>
+                </div>
+            </section>
+
+            <div class=containerVideo>
+                <video class=videoEindresultaatKlein autoplay="" muted="" loop="" src="videos/18.mp4"></video>
+            </div>
+        </section>
+
+
+    </div>
+
+
+
+
+
+    <section class=social-links>
+        <img src="afbeeldingen/326.png">
+        <!--        <img src="afbeeldingen/5.png">-->
+        <a href="https://github.com/JeroenHogeschoolAccount?tab=repositories">
+            <img src="afbeeldingen/6.png">
+        </a>
+    </section>
+
+
+    <div class=containerJa>
+        <a type="button" id="omhoogKnop" onclick="scrolltoTop()">
+            <img class=toTopIcon src="afbeeldingen/328.png">
+        </a>
+    </div>
+
+
+    <footer class="footer">Copyright © 2020 Jeroen </footer>
+
+
+
+
+    <script src="js/portfolioNieuw.js"></script>
+
+    <script>
+        var knopOmhoog = document.getElementById("omhoogKnop");
+
+        window.onscroll = function() {
+            if (document.documentElement.scrollTop > 200) {
+                knopOmhoog.style.display = "block";
+            } else {
+                knopOmhoog.style.display = "none";
+            }
+        };
+
+        function scrolltoTop() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+</body></html>

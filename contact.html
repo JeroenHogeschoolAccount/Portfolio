@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class=scroll>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/portfolioNieuw.css">
+    <link rel="icon" href="afbeeldingen/11.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="AdsBot-Google" content="noindex, nofollow">
+</head>
+
+
+<body>
+
+    <div class=container>
+
+        <div class=navbar>
+            <a href="index.html">
+                <img src="afbeeldingen/11.png" class=logo>
+            </a>
+            <nav>
+                <ul id=menuList>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="overmij.html">Over mij</a></li>
+                    <li><a href="cmd.html">CMD projecten</a></li>
+                    <li><a href="vrijetijd.html">Vrije tijd </a></li>
+                    <li><a href="contact.html" class="streep">Contact </a></li>
+                </ul>
+            </nav>
+            <img src="afbeeldingen/3.png" class=menu-icon onclick="togglemenu()">
+        </div>
+
+
+        <section class=containerRij>
+            <section class=rij>
+                <div class=column1>
+                    <h2>Contact </h2>
+                    <h3>Mail</h3>
+                    <p>U kunt via de mail contact met mij opnemen. Mijn e-mailadres: jeroen.van.hulst@hva.nl</p>
+                </div>
+            </section>
+        </section>
+
+    </div>
+
+
+
+
+
+
+
+    <section class=social-links>
+        <img src="afbeeldingen/326.png">
+        <!--        <img src="afbeeldingen/5.png">-->
+        <a href="https://github.com/JeroenHogeschoolAccount?tab=repositories">
+            <img src="afbeeldingen/6.png">
+        </a>
+    </section>
+
+
+    <div class=containerJa>
+        <a type="button" id="omhoogKnop" onclick="scrolltoTop()">
+            <img class=toTopIcon src="afbeeldingen/328.png">
+        </a>
+    </div>
+
+
+    <footer class="footer">Copyright © 2023 Jeroen </footer>
+
+
+
+
+
+    <script src="js/portfolioNieuw.js"></script>
+
+    <script>
+        var knopOmhoog = document.getElementById("omhoogKnop");
+
+        window.onscroll = function() {
+            if (document.documentElement.scrollTop > 200) {
+                knopOmhoog.style.display = "block";
+            } else {
+                knopOmhoog.style.display = "none";
+            }
+        };
+
+        function scrolltoTop() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+</body></html>
