@@ -1,0 +1,1492 @@
+/**********************************************************************ALGEMEEN*************************************************************** *********************************************************************************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    /*    background-color: #d9efff;*/
+    background-color: white;
+    /*    scroll-behavior: smooth;*/
+}
+
+h2 {
+    font-family: poppins;
+    line-height: 130%;
+}
+
+h3 {
+    font-family: poppins, sans-serif;
+    font-weight: 500;
+}
+
+h4 {
+    position: relative;
+    top: 1em;
+    font-family: poppins, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 19px;
+    line-height: 140%;
+}
+
+h5 {
+    position: relative;
+    top: -3px;
+    font-family: poppins, sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    margin-top: 3em;
+    margin-bottom: 0.6em;
+}
+
+p {
+    font-family: Montserrat;
+    line-height: 140%;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+button {
+    width: 180px;
+    height: 50px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+    transition: 0.3s;
+    box-shadow: 0 2px 6px rgba(138, 29, 255, 0.8);
+    box-shadow: 0 2px 6px rgba(81, 97, 245, 0.8);
+    background-color: fuchsia;
+    background-color: #5161f5;
+}
+
+button:hover {
+    color: white;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 6px rgba(255, 0, 255, 0.8);
+    background-color: fuchsia;
+    background-image: none;
+}
+
+.social-links img {
+    height: 30px;
+    margin: 20px;
+    border-radius: 50%;
+    margin-bottom: 6em;
+    margin-right: 1em;
+    margin-left: 1em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+.social-links {
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 34px;
+    bottom: 0;
+    padding-top: 12px;
+    text-align: center;
+    background-color: grey;
+    color: grey;
+    font-size: 15px;
+    font-family: poppins, sans-serif;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 10;
+}
+
+a {
+    text-decoration: none;
+}
+
+.modal {
+    -webkit-backdrop-filter: blur(30px);
+    -moz-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease-out;
+    z-index: 11;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.full-img {
+    position: absolute;
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.25s ease-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.full-img.open {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.kruisje {
+    position: absolute;
+    right: .7em;
+    top: .38em;
+    color: #d1d1d1;
+    color: #891dff;
+    color: #5161f5;
+    font-size: 3em;
+    pointer-events: none;
+
+    right: .7em;
+    top: .30em;
+}
+
+
+.modal2 {
+    -webkit-backdrop-filter: blur(30px);
+    -moz-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease-out;
+    z-index: 11;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.modal2.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.full-img2 {
+    position: absolute;
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.25s ease-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    overflow: hidden;
+}
+
+.full-img2.open {
+    transform: translate(-50%, -50%) scale(0.6);
+}
+
+.kruisje2 {
+    position: absolute;
+    right: .7em;
+    top: .38em;
+    color: #d1d1d1;
+    color: #891dff;
+    color: #5161f5;
+    font-size: 3em;
+    pointer-events: none;
+
+    right: .7em;
+    top: .30em;
+}
+
+.link {
+    font-family: Montserrat, sans-serif;
+    color: #1e8fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+video {
+    filter: saturate(1.3);
+}
+
+/*
+.containerJa button {
+    display: none height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    background-color: black;
+    padding: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+*/
+
+.containerJa a {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    /*
+    width: 50px;
+    height: 50px;
+    */
+    background-color: white;
+    bottom: 70px;
+    right: 30px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.containerJa a:hover {
+    transform: scale(1.1);
+}
+
+.toTopIcon {
+    width: 100%;
+}
+
+
+
+
+
+
+
+/**********************************************************************NAVIGATIE************************************************************** *********************************************************************************************************************************************/
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 90px;
+    /*    width: 100px;*/
+    /*        width: 110px;*/
+    margin: 30px 0;
+    margin-left: 10%;
+    cursor: pointer;
+    transition: 0.6s;
+    /*            border-radius: 15%;*/
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 10px -8px;
+    /*    border-radius: 20%;*/
+}
+
+@keyframes logo {
+    0% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(-10deg);
+    box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, 0.15), -5px -5px 30px 7px rgba(0, 0, 0, 0.03);
+}
+
+.menu-icon {
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-family: poppins, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:not(.streep):hover {
+
+
+    color: #891dff;
+    color: #30d98d;
+    color: #ffd21f;
+    color: #063fc4;
+    color: #16e0a4;
+    color: #38cffc;
+    color: #385ffc;
+    color: #5161f5;
+}
+
+.streep {
+    font-weight: 900;
+    color: #891dff;
+
+    color: white;
+    padding: 10px;
+    background-color: #5161f5;
+    background-color: #2a34eb;
+    background-color: black;
+    /*    background-color: black;*/
+    /*
+    background-color: black;
+    background-color: #8C00FF;
+*/
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 10px -8px;
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************CONTENT HOME*********************************************************** *********************************************************************************************************************************************/
+.rij {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.column1 {
+    position: relative;
+    top: -110px;
+    flex-basis: 40%;
+    margin-left: 50px;
+    animation: logo 1s 1;
+    animation: logo 0.4s 1;
+    transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+}
+
+.column1 h2 {
+    font-size: 55px;
+}
+
+.column1 h3 {
+    font-size: 30px;
+    color: #5161f5;
+    margin: 20px 0 10px;
+}
+
+.column1 p {
+    font-size: 16px;
+    font-size: 20px;
+    margin: 30px 0;
+    color: black;
+    font-weight: 200;
+
+    font-weight: 300;
+    color: #595959;
+}
+
+.column1::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 81.4%;
+    left: -40px;
+    top: 8px;
+    top: 14px;
+    background-image: linear-gradient(to right top, #d336ff, #c32eff, #b127ff, #9e21ff, #891dff);
+}
+
+.column2 {
+    position: relative;
+    top: -110px;
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+.column2 .profielfoto {
+    width: 75%;
+    width: 100%;
+    /*        border-radius: 50%;*/
+}
+
+.samenvatting {
+    max-width: 410px;
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************SMALL SCREEN RESPONSIVE************************************************ *********************************************************************************************************************************************/
+@media only screen and (max-width:750px) {
+
+    /*
+    nav ul {
+        position: absolute;
+        width: 100%;
+        top: 75px;
+        height: 320px;
+        right: 0;
+        margin-bottom: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: flex;
+        justify-content: center;
+        left: 3em;
+        margin-left: 40px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    nav ul li a {
+        color: black;
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        top: 9em;
+        overflow: hidden;
+        transition: 0.7s;
+    }
+*/
+
+    .rij {
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+
+    .column2 {
+        flex-basis: 100%;
+        /*        margin-bottom: 50px;*/
+        top: 0px;
+    }
+
+    .column2 .profielfoto {
+        width: 0%;
+    }
+
+    .color-box {
+        transform: translateX(75px);
+    }
+
+    .column1 {
+        flex-basis: 100%;
+        top: 0px;
+        margin-left: 1em;
+    }
+
+    .column1::after {
+        display: none;
+    }
+
+    .column1 h2 {
+        font-size: 35px;
+    }
+
+    .column1 h3 {
+        font-size: 20px;
+    }
+
+    .kaartLijst {
+        margin-left: -0.6em !important;
+        margin-left: -0.8em !important;
+    }
+
+    .card {
+        transform: scale(0.9) !important;
+        margin-left: 2% !important;
+    }
+
+    .logo {
+        margin-left: 17%;
+        transform: scale(0.8) !important;
+        margin-left: 4%;
+
+        transform: scale(0.85) !important;
+        transform: scale(0.9) !important;
+        margin-left: 11%;
+        margin-left: 15%;
+    }
+
+    .containerRij {
+        margin-top: -6.2em;
+    }
+
+    .containerVideo {
+        margin-top: -2em !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardVak {
+        transform: scale(0.9) !important;
+        margin-left: 2% !important;
+    }
+
+    .videoEindresultaatKlein {
+        width: 90% !important;
+        margin-bottom: 2em;
+    }
+
+    .videoEindresultaatGemiddeld {
+        width: 90% !important;
+        margin-bottom: 2em;
+    }
+
+    .cardVak#cardVakGeenHover {
+        cursor: default;
+        filter: brightness(95%);
+        transform: scale(0.9);
+    }
+
+    .list {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 4fr)) !important;
+    }
+
+    .containerVideo {
+        margin-bottom: 5em !important;
+    }
+
+    #omhoogKnop {
+        bottom: 67px !important;
+        right: 20px !important;
+        right: 31px !important;
+
+        width: 54px !important;
+        height: 54px !important;
+
+        width: 56px !important;
+        height: 56px !important;
+
+    }
+
+    .card:hover {
+        transform: scale(0.9) !important;
+    }
+
+    .cardVak:hover {
+        transform: scale(0.9) !important
+    }
+
+}
+
+@media only screen and (max-width:1070px) {
+
+    #containerCMDProgress {
+        display: none;
+    }
+
+    .vlakCMDProgress {
+        display: none;
+    }
+
+    .containerContentKaart2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    nav ul {
+        position: absolute;
+        width: 100%;
+        top: 75px;
+        height: 320px;
+        right: 0;
+        margin-bottom: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        /*
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        -moz-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        z-index: 2;
+
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px)  !important;
+        -moz-backdrop-filter: blur(10px)  !important;
+        backdrop-filter: blur(10px) !important;
+*/
+        background-color: white;
+        z-index: 100;
+    }
+
+    nav ul li {
+        display: flex;
+        justify-content: center;
+        left: 3em;
+        margin-left: 40px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    nav ul li a {
+        color: black;
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        top: 9em;
+        overflow: hidden;
+        transition: 0.7s;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************KAARTEN VAN VRIJE TIJD************************************************* *********************************************************************************************************************************************/
+.kaartLijst {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: -2em;
+    margin-left: -2.5em;
+    margin-bottom: 8em;
+    margin-bottom: 6em;
+    z-index: 0;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+    margin: 30px auto;
+    margin-left: 4%;
+    margin-right: 0.7%;
+    -webkit-overflow: hidden;
+    -moz-overflow: hidden;
+    overflow: hidden;
+
+    transform: scale(1);
+}
+
+.card .kaartThumbnail {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+
+    object-fit: cover;
+    -webkit-object-fit: cover;
+    -moz-object-fit: cover;
+    object-fit: cover;
+}
+
+.card .kaartThumbnail img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+    -webkit-object-fit: cover;
+    -moz-object-fit: cover;
+    object-fit: cover;
+}
+
+.card .kaartTitel {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: -75px;
+    height: 40px;
+}
+
+.kaartVideo {
+    width: 101.4%;
+    width: 102.2%;
+    width: 102.6%;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+@media all and (max-width: 500px) {
+    .kaartLijst {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************CMD PROGRESS BALK****************************************************** *********************************************************************************************************************************************/
+#containerCMDProgress {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    margin-top: 4em;
+    margin-left: -3em;
+}
+
+.containerContentKaart2 {
+    position: absolute;
+    box-sizing: border-box;
+    height: 250px;
+    width: 700px;
+    padding: 0px 0 30px 20px;
+    margin-top: -19em;
+}
+
+.vlakCMDProgress {
+    width: 800px;
+    height: 550px;
+    border-radius: 40px;
+    background-color: #EBECF0;
+    box-shadow: 5px 5px 10px #AFAFAF,
+        -5px -5px 10px #F8F8F8;
+}
+
+.containerBalk {
+    width: 650px;
+    margin-top: 1.5em;
+}
+
+.balkInhoud {
+    height: 20px;
+    transition: 0.4s linear;
+}
+
+.balkAchtergrond {
+    padding: 6px;
+    border-radius: 30px;
+    box-shadow: -6px -6px 5px rgba(80, 90, 90, 0.1),
+        10px 15px 10px #F8F8F8, inset -5px -5px 5px rgba(82.5, 82, 81, 0.15),
+        inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+    background-color: #EBECF0;
+}
+
+.balk100Bewegen .balkInhoud {
+    width: 80%;
+    animation: balkAnimatie100 10s infinite;
+    background-color: #00ff4c;
+    border-radius: 30px;
+    box-shadow:
+        0 0 5px #00ff4c,
+        0 0 7.5px #00ff4c,
+        0 0 15px #00ff4c,
+        0 0 30px #00ff4c
+}
+
+@keyframes balkAnimatie100 {
+    0% {
+        width: 5%;
+    }
+
+    60% {
+        width: 100%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.balk75Bewegen .balkInhoud {
+    width: 90%;
+    animation: balkAnimatie75 10s infinite;
+    background-color: #00ff4c;
+    border-radius: 30px;
+    box-shadow:
+        0 0 5px #00ff4c,
+        0 0 7.5px #00ff4c,
+        0 0 15px #00ff4c,
+        0 0 30px #00ff4c
+}
+
+@keyframes balkAnimatie75 {
+    0% {
+        width: 5%;
+    }
+
+    60% {
+        width: 75%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+.balk50Bewegen .balkInhoud {
+    width: 90%;
+    animation: balkAnimatie50 10s infinite;
+    background-color: #00ff4c;
+    border-radius: 30px;
+    box-shadow:
+        0 0 5px #00ff4c,
+        0 0 7.5px #00ff4c,
+        0 0 15px #00ff4c,
+        0 0 30px #00ff4c
+}
+
+@keyframes balkAnimatie50 {
+    0% {
+        width: 5%;
+    }
+
+    60% {
+        width: 50%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/**********************************************************************DIPLOMA ANIMATIE******************************************************* *********************************************************************************************************************************************/
+.containerDiplomas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 600px;
+    margin-left: -3%;
+}
+
+.diploma {
+    position: absolute;
+    width: 300px;
+    height: 430px;
+    transform: scale(1);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    animation: diploma infinite 6s;
+}
+
+.diploma-nieuw {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+    background-image: linear-gradient(to right top, #4e00ff, #2041ff, #005dff, #0072ff, #0085ff);
+    background-color: white;
+    animation-delay: 1s;
+}
+
+.diploma-havo {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    background-image: linear-gradient(to right top, #ffde00, #ffd000, #ffc200, #ffb400, #ffa600);
+    animation-delay: 3s;
+}
+
+.diploma-cmd {
+    background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+    background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+    background-image: linear-gradient(to right top, #8500ff, #a900ff, #c900ff, #e500ff, #ff00ff);
+    animation-delay: 5s;
+}
+
+@keyframes diploma {
+    0% {
+        z-index: 0;
+    }
+
+    20% {
+        transform: translateY(40px);
+        z-index: 2;
+    }
+
+    35% {
+        transform: translateY(60px);
+        z-index: 2;
+    }
+
+    42% {
+        transform: translateY(78px);
+        z-index: 3;
+    }
+
+    70% {
+        transform: translateY(78px);
+        z-index: 3;
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(170px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: scale(1.5) translateY(240px);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    90% {
+        transform: scale(1.1);
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.diplomaTitel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 1.3em;
+    color: white;
+    font-family: poppins, sans-serif;
+    font-size: 34px;
+}
+
+.diplomaNiveau {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 4em;
+    color: white;
+    font-family: poppins, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.diplomaJaar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 6em;
+    font-style: italic;
+    color: white;
+    font-family: poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+table,
+th,
+td {
+    width: 280px;
+    margin-right: 144px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-style: none;
+
+}
+
+th {
+    text-align: left;
+    padding-bottom: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    color: #5161f5;
+    color: #595959;
+}
+
+td {
+    font-size: 16px;
+    font-size: 20px;
+    margin: 30px 0;
+    color: black;
+    font-weight: 200;
+
+    font-weight: 300;
+    color: #595959;
+    padding-bottom: 5px;
+}
+
+.containerDiplomaTabel {
+    margin-bottom: 5em;
+    margin-bottom: 3em;
+}
+
+
+
+
+/**********************************************************************CMD PROJECTEN - VRIJE TIJD - CONTACT (ALGEMEEN)************************ *********************************************************************************************************************************************/
+.containerRij {
+    position: relative;
+    top: 6.31em;
+    top: 4em;
+}
+
+#column1StreepWeg::after {
+    width: 0px;
+}
+
+.datum {
+    font-family: Montserrat, sans-serif;
+    font-size: 11px;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************VRIJE TIJD DETAIL******************************************************  *********************************************************************************************************************************************/
+.kaartVideo2 {
+    width: 101.4%;
+    width: 103.6%;
+}
+
+.videoEindresultaat {
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.15), -5px -5px 30px 7px rgba(0, 0, 0, 0.03);
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.15), -5px -5px 30px 7px rgba(0, 0, 0, 0.03);
+    width: 90%;
+    /*        border-radius: 50%;*/
+}
+
+.containerVideo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10em;
+    margin-bottom: 10em;
+    margin-bottom: 17em;
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************KAARTEN VAN CMD PROJECTEN********************************************** *********************************************************************************************************************************************/
+.cardVak {
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+    margin-left: 4%;
+    margin-right: 0.7%;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0)
+}
+
+.cardVak:hover {
+    transform: scale(1.1);
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+}
+
+#cardVakGeenHover {
+    cursor: default;
+    filter: brightness(95%);
+    transform: scale(1);
+}
+
+#cardVakGeenHover .kaartThumbnail img {
+    filter: brightness(95%);
+}
+
+.cardVak .kaartThumbnail {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+}
+
+.cardVak .kaartThumbnail img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+    filter: brightness(105%);
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+    filter: brightness(105%);
+    transition: 0.6s;
+    width: 102%;
+}
+
+.cardVak:hover .kaartThumbnail img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+    filter: brightness(100%);
+    width: 102%;
+}
+
+.cardVak .kaartTitelVak {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 1.4em;
+    font-weight: bold;
+    margin-top: -100px;
+    height: 40px;
+    font-family: poppins, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.kaartTitelVak #kaartTitelZwart {
+    color: black;
+    backdrop-filter: blur(20px) saturate(90%);
+    -webkit-backdrop-filter: blur(20px) saturate(90%);
+    -moz-backdrop-filter: blur(20px) saturate(90%);
+    backdrop-filter: blur(20px) saturate(90%);
+}
+
+.kaartDatum {
+    font-family: poppins, sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.cardVak .kaartWanneerVak3 {
+    position: absolute;
+    width: 58%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -102em;
+    top: -105em;
+    left: 19%;
+    font-size: 2px;
+    padding: 3em;
+    border-radius: 0em 0em 10em 10em;
+    background-color: #891dff;
+    background-color: #6a00ff;
+}
+
+.cardVak .kaartWanneerVak2 {
+    position: absolute;
+    width: 58%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -102em;
+    top: -105em;
+    left: 19%;
+    font-size: 2px;
+    padding: 3em;
+    border-radius: 0em 0em 10em 10em;
+    background-color: #891dff;
+    background-color: #ff0059;
+    background-color: #296dff;
+    background-color: #ff00ee;
+    background-color: #fce703;
+    background-color: #ebd534;
+    background-color: #FFD033;
+    background-color: #fb00ff;
+    /*    background-color: #ebd810;*/
+
+}
+
+.cardVak .kaartWanneerVak1 {
+    position: absolute;
+    width: 58%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -102em;
+    top: -105em;
+    left: 19%;
+    font-size: 2px;
+    padding: 3em;
+    border-radius: 0em 0em 10em 10em;
+    background-color: #296dff;
+    /*
+    background-color: #4fe368;
+    background-color: #3430ff;
+    background-color: #30b3ff;
+*/
+}
+
+.kaartInfo {
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************DETAIL PAGINA ENKEL MOBIEL VIDEO*************************************** *********************************************************************************************************************************************/
+.videoEindresultaatKlein {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 12px;
+    /*    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;*/
+    /*box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.2) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;*/
+    /*           box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2), -5px -5px 30px 7px rgba(0, 0, 0, 0.03);*/
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************DETAIL PAGINA ENKEL TABLET VIDEO*************************************** *********************************************************************************************************************************************/
+.videoEindresultaatGemiddeld {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 12px;
+    /*    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;*/
+    /*box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.2) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;*/
+    /*           box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2), -5px -5px 30px 7px rgba(0, 0, 0, 0.03);*/
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /*        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.15), -5px -5px 30px 7px rgba(0, 0, 0, 0.03);*/
+    width: 60%;
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************DETAIL PAGINA LIJST AFBEELDINGEN BREED********************************* *********************************************************************************************************************************************/
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 4fr));
+    grid-gap: 3em;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    margin-left: 3.2em;
+    margin-right: 3.2em;
+}
+
+.img-container {
+    overflow: hidden;
+    margin-bottom: -0.25em;
+}
+
+.liListBreed {
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    /*        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.15), -5px -5px 30px 7px rgba(0, 0, 0, 0.03);*/
+
+
+    /*
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+*/
+
+
+
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 10px -8px;
+}
+
+.lijstBreedAfbeelding {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.lijstBreedAfbeelding:hover {
+    transform: scale(1.03);
+    filter: saturate(1.2);
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************DETAIL PAGINA LIJST AFBEELDINGEN SMAL********************************** *********************************************************************************************************************************************/
+.listSmal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 4fr));
+    grid-gap: 3em;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    margin-left: 3.2em;
+    margin-right: 3.2em;
+}
+
+
+
+
+
+
+
+
+
+/**********************************************************************RANDOM**************************************************************************************************************************************************************************************************************/
+.liListBreedZwart {
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    /*
+    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+*/
+
+}
+
+.videoEindresultaat2 {
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.15), -5px -5px 30px 7px rgba(0, 0, 0, 0.03);
+    width: 100%;
+}
+
+/*
+.containerVideo2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10em;
+    margin-bottom: 10em;
+
+    margin-top: -17em;
+    margin-bottom: 17em;
+}
+*/
+
+
+html.scroll {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
