@@ -925,11 +925,11 @@ nav ul li a:not(.streep):hover {
     }
 
     60% {
-        width: 30%;
+        width: 50%;
     }
 
     100% {
-        width: 30%;
+        width: 50%;
     }
 }
 
